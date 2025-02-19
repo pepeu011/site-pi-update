@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameMaster Academy - Domine seus Jogos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Link para a fonte Roboto -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="./Imagens/Logo Pepeu.svg" alt="GameMaster Academy " style="height: 50px;" >
+            </div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#courses">Cursos</a>
+                <a href="#coaches">Coaches</a>
+                <a href="#testimonials">Depoimentos</a>
+                <a href="./Contato/contact.html">Contato</a>
+            </div>
+            <div class="entrar-botao">
+                <a href="./Cadastro/index.html">Cadastre-se ou entre</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Domine seus Jogos Favoritos</h1>
+            <p>Treinamento profissional com os melhores jogadores do mundo</p>
+            <a href="#courses" class="cta-button">Começar Agora</a>
+        </div>
+    </section>
+
+    <section class="courses" id="courses">
+        <h2>Nossos Cursos Populares</h2>
+        <br>
+        <!-- Filtro de Nível de Dificuldade -->
+        <div class="filter">
+            <label for="difficulty-filter">Filtrar por nível:</label>
+            <select id="difficulty-filter" name="difficulty-filter">
+                <option value="all">Todos</option>
+                <option value="beginner">Iniciante</option>
+                <option value="intermediate">Intermediário</option>
+                <option value="advanced">Avançado</option>
+            </select>
+        </div>
+    
+        <div class="courses-grid">
+            <!-- Seus cards de cursos aqui -->
+            <div class="course-card" data-difficulty="intermediate">
+                <div class="course-image" style="background-image: url('./Imagens/free-fire.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty intermediate">Intermediário</span>
+                    <h3>Free Fire</h3>
+                    <p class="course-content-p">Domine jogos de battleroyale</p>
+                    <p>Duração: 6 semanas</p>
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+
+            <div class="course-card" data-difficulty="advanced">
+                <div class="course-image" style="background-image: url('./Imagens/LeagueofLegends.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty advanced">Avançado</span>
+                    <h3>League Of Legends</h3>
+                    <p class="course-content-p">Torne-se um jogador elite em League of Legends</p>
+                    <p>Duração: 8 semanas</p>
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+        
+            <div class="course-card" data-difficulty="beginner">
+                <div class="course-image" style="background-image: url('./Imagens/cs.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty beginner">Iniciante</span>
+                    <h3>CS2 </h3>
+                    <p class="course-content-p">Aprenda as mecânicas básicas e estratégias de CS2.</p>
+                    <p>Duração: 5 semanas</p>
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+        
+            <div class="course-card" data-difficulty="intermediate">
+                <div class="course-image" style="background-image: url('./Imagens/Valorant.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty intermediate">Intermediário</span>
+                    <h3>Valorant</h3>
+                    <p class="course-content-p">Domine as táticas e habilidades dos agentes em Valorant.</p>
+                    <p>Duração: 6 semanas</p>
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+        
+            <div class="course-card" data-difficulty="advanced">
+                <div class="course-image" style="background-image: url('./Imagens/fort.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty advanced">Avançado</span>
+                    <h3>Fortnite Building</h3>
+                    <p class="course-content-p">Aprenda a construir e lutar como um profissional em Fortnite.</p>
+                    <p>Duração: 4 semanas</p>
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+        
+            <div class="course-card" data-difficulty="beginner">
+                <div class="course-image" style="background-image: url('./Imagens/Mine.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty beginner">Iniciante</span>
+                    <h3>Minecraft Survival</h3>
+                    <p class="course-content-p">Domine as habilidades de sobrevivência e construção em Minecraft.</p>
+                    <p>Duração: 5 semanas</p> 
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a>
+            </div>
+        
+            <div class="course-card" data-difficulty="intermediate">
+                <div class="course-image" style="background-image: url('./Imagens/apex.png')"></div>
+                <div class="course-content">
+                    <span class="difficulty intermediate">Intermediário</span>
+                    <h3>Apex Legends</h3>
+                    <p class="course-content-p">Aprenda estratégias avançadas e trabalho em equipe em Apex Legends.</p>
+                    <p>Duração: 6 semanas</p> 
+                </div>
+                <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+        
+            <div class="course-card" data-difficulty="advanced">
+                <div class="course-image" style="background-image: url('./Imagens/dayz.png')"></div>
+                    <div class="course-content">
+                        <span class="difficulty advanced">Avançado</span>
+                        <h3>DayZ</h3>
+                        <p class="course-content-p">Aprenda estratégias avançadas e trabalho em equipe.</p>
+                        <p>Duração: 8 semanas</p>
+                    </div>
+                    <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a> 
+            </div>
+        
+            <div class="course-card" data-difficulty="beginner">
+                <div class="course-image" style="background-image: url('./Imagens/call.png')"></div>
+                    <div class="course-content">
+                        <span class="difficulty beginner">Iniciante</span>
+                        <h3>Call Of Duty: Warzone</h3>
+                        <p class="course-content-p">Aprenda estratégias avançadas e trabalho em equipe.</p>
+                        <p>Duração: 6 semanas</p> 
+                    </div>
+                    <a href="./Inscrição/inscricao.html" class="inscricao-button">Inscreva-se</a>
+            </div>
+        </div>
+    
+            <!-- Repita os outros cards de cursos com o atributo data-difficulty correspondente -->
+        </div>
+    </section>
+
+    <section class="coaches" id="coaches">
+        <h2>Nossos Coaches</h2>
+        <div class="coache-grid">
+            <div class="coache-card">
+                <div class="course-image" style="background-image: url('./Imagens/Prof10.png')"></div>
+                <div class="course-content">
+                    <h3>Loud Bradock</h3>
+                    <p>Especialista em Free Fire.</p>
+                    <p>Jogos: Free Fire</p>
+                </div>
+            </div>
+
+            <div class="coache-card">
+                <div class="course-image" style="background-image: url('./Imagens/prof15.png')"></div>
+                <div class="course-content">
+                    <h3>Carlos Felipe</h3>
+                    <p>Mestre em estratégias.</p>
+                    <p>Jogos: Valorant</p>
+                </div>
+            </div>
+
+            <div class="coache-card">
+                <div class="course-image" style="background-image: url('./Imagens/prof13.png')"></div>
+                <div class="course-content">
+                    <h3>Makoto Iguchi</h3>
+                <p>Especialista em Moba.</p>
+                <p>Jogo: LeagueofLegends</p>
+            </div>
+        </div>
+
+        <div class="coache-card">
+            <div class="course-image" style="background-image: url('./Imagens/prof12.png')"></div>
+            <div class="course-content">
+                <h3>Robert Santhiago</h3>
+                <p>Especialista em sniping.</p>
+                <p>Jogo: Apex Legends</p>
+            </div>
+        </div>
+
+        <div class="coache-card" >
+            <div class="course-image" style="background-image: url('./Imagens/prof11.png')"></div>
+            <div class="course-content">
+                <h3>Rodrigues</h3>
+                <p>Especialista em estratégias.</p>
+                <p>Jogo: CS-GO</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <h2>O que nossos alunos dizem</h2>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <img src="./Imagens/joao_silva.png" alt="João Silva" class="testimonial-photo">
+            <p>"O curso de Free Fire foi incrível! Aprendi muito e melhorei minhas habilidades."</p>
+            <span>- João Silva</span>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/maria_oliveira.png" alt="Maria Oliveira" class="testimonial-photo">
+            <p>"Os coaches são muito profissionais e os cursos são bem estruturados."</p>
+            <span>- Maria Oliveira</span>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/pedro_santos.png" alt="Pedro Santos" class="testimonial-photo">
+            <p>"O curso de League of Legends me ajudou a subir de elo rapidamente. Recomendo!"</p>
+            <span>- Pedro Santos</span>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/ana_costa.png" alt="Ana Costa" class="testimonial-photo">
+            <p>"Aprendi muito sobre táticas e estratégias no curso de CS2. Excelente!"</p>
+            <span>- Ana Costa</span>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/lucas_pereira.png" alt="Lucas Pereira" class="testimonial-photo">
+            <p>"Os treinamentos de Valorant são muito detalhados e eficazes. Adorei!"</p>
+            <span>- Lucas Pereira</span>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/mariana_lima.png" alt="Mariana Lima" class="testimonial-photo">
+            <p>"O curso de Fortnite Building me ensinou a construir como um profissional."</p>
+            <span>- Mariana Lima</span>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/felipe_almeida.png" alt="Felipe Almeida" class="testimonial-photo">
+            <p>"Minecraft Survival foi muito divertido e educativo. Aprendi muito!"</p>
+            <span>- Felipe Almeida</span>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/bruno_ferreira.png" alt="Bruno Ferreira" class="testimonial-photo">
+            <p>"Apex Legends nunca foi tão fácil depois do curso. Recomendo a todos!"</p>
+            <span>- Bruno Ferreira</span>
+            <div class="stars">
+                ★★★★★
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <img src="./Imagens/carla_souza.png" alt="Carla Souza" class="testimonial-photo">
+            <p>"O curso de DayZ é perfeito para quem quer aprender estratégias avançadas."</p>
+            <span>- Carla Souza</span>
+            <div class="stars">
+                ★★★★☆
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="blog" id="blog">
+    <h2>Blog</h2>
+    <div class="blog-post">
+        <h3>5 Dicas para Melhorar no Free Fire</h3>
+        <p>Aprenda as melhores estratégias para se tornar um jogador profissional...</p>
+        <a href="./Blog/post1.html">Leia mais</a>
+    </div>
+    <div class="blog-post">
+        <h3>Entrevista com Loud Bradock</h3>
+        <p>Conheça a trajetória de um dos melhores jogadores de Free Fire...</p>
+        <a href="./Blog/post2.html">Leia mais</a>
+    </div>
+    <!-- Adicione mais posts conforme necessário -->
+</section>
+
+<section class="faq" id="faq">
+    <h2>Perguntas Frequentes</h2>
+    <div class="faq-item">
+        <h3>Como me inscrevo em um curso?</h3>
+        <p>Para se inscrever, basta clicar no botão "Inscreva-se" no curso desejado e preencher o formulário de inscrição.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Quais são as formas de pagamento aceitas?</h3>
+        <p>Aceitamos pagamentos via cartão de crédito, boleto bancário e PayPal.</p>
+    </div>
+    <!-- Adicione mais perguntas conforme necessário -->
+</section>
+
+<section class="partners" id="partners">
+    <h2>Nossos Parceiros</h2>
+    <div class="partner-logo">
+        <img src="./Imagens/partner1.png" alt="Parceiro 1">
+    </div>
+    <div class="partner-logo">
+        <img src="./Imagens/partner2.png" alt="Parceiro 2">
+    </div>
+    <!-- Adicione mais logos conforme necessário -->
+</section>
+
+<section class="newsletter">
+    <h2>Inscreva-se na nossa Newsletter</h2>
+    <form action="subscribe.php" method="post">
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <button type="submit">Inscrever</button>
+    </form>
+</section>
+
+<div class="social-media">
+    <a
+    href="https://wa.me/11937463762?text=Olá, gostaria de saber mais sobre os cursos!"
+    target="_blank"
+    rel="noopener noreferrer"
+    >
+        <div class="imagem-zap">
+            <button id="whatsappButton" class="whatsapp-button">
+                <img src="./Imagens/suporte.png" alt="" />
+            </button>
+        </div>
+        <div class="balão">
+            <span>Suporte</span>
+        </div>
+    </a>
+</div>
+
+<footer>
+    <p>© 2025 GameMaster Academy. Todos os direitos reservados.</p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

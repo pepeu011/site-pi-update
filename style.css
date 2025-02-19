@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; /* Atualiza a fonte para Roboto */
+}
+
+body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+}
+
+.social-media {
+    position: fixed; /* Fixa o elemento na tela */
+    bottom: 20px; /* Distância do fundo da tela */
+    right: 20px; /* Distância da direita da tela */
+    display: flex;
+    flex-direction: column; /* Alinha o balão embaixo do botão */
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+.imagem-zap {
+    background-color: transparent;
+    border-radius: 50%;
+    padding: 10px;
+    transition: transform 0.2s;
+}
+
+.whatsapp-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.whatsapp-button img {
+    width: 60px;
+    height: 60px;
+}
+
+.imagem-zap:hover {
+    transform: scale(1.1);
+}
+
+.balão {
+    position: absolute; /* Posiciona o balão em relação ao botão */
+    bottom: 90px; /* Distância do botão */
+    left: 50%; /* Centraliza horizontalmente */
+    color: black;
+    transform: translateX(-50%); /* Ajusta a posição para o centro */
+    background-color: #ffffff; /* Cor de fundo do balão */
+    border: 1px solid #000000; /* Borda verde do WhatsApp */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para efeito de profundidade */
+    display: none; /* Inicialmente escondido */
+    white-space: nowrap; /* Impede que o texto pule de linha */
+    font-weight: bold;
+}
+
+.social-media:hover .balão {
+    display: block; /* Mostra o balão ao passar o mouse */
+}
+
+/*Botão Cadastro*/
+
+.entrar-botao {
+    display: flex; /* Usar flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    margin: 10px; /* Margem ao redor do botão */
+}
+
+.entrar-botao a {
+    background-color: #00ff88; /* Cor verde */
+    color: black; /* Cor do texto */
+    padding: 10px 20px; /* Espaçamento interno (vertical e horizontal) */
+    text-decoration: none; /* Remove o sublinhado do link */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+    font-weight: bold;
+}
+
+.entrar-botao a:hover {
+    background-color: #00cc70; /* Cor verde mais escura ao passar o mouse */
+    transform: scale(1.05); /* Aumenta ligeiramente o botão ao passar o mouse */
+}
+
+/* Estilos para a seção de Depoimentos */
+.testimonials {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #00ff88;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.testimonial-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner */
+}
+
+.testimonial-card p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.testimonial-card span {
+    font-weight: bold;
+    color: #00ff88;
+}
+
+.stars {
+    color: #ffd700; /* Cor dourada para as estrelas */
+    font-size: 1.2em;
+}
+
+/* Estilos para a seção de Blog */
+.blog {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.blog-post {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.blog-post a {
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a seção de Perguntas Frequentes (FAQ) */
+.faq {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção de Parceiros */
+.partners {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.partners h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.partner-logo {
+    display: inline-block;
+    margin: 10px;
+}
+
+.partner-logo img {
+    max-width: 150px;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.partner-logo img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para a seção de Newsletter */
+.newsletter {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 300px;
+    max-width: 100%;
+}
+
+.newsletter button {
+    background-color: #00ff88;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+    background-color: #00cc70;
+    transform: scale(1.05);
+}
+
+header {
+    background-color: #0a0a0a;
+    padding: 20px 0; /* Adiciona espaçamento vertical */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Adiciona espaçamento horizontal */
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px; /* Adiciona espaçamento entre os links */
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00ff88; /* Cor verde ao passar o mouse */
+}
+
+.logo img {
+    height: 50px;
+}
