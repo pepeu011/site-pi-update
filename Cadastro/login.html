@@ -9,6 +9,34 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+	<script>
+        // Função para processar o login
+        async function handleLogin(event) {
+            event.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+
+            // Enviar solicitação de login ao servidor
+            const response = await fetch('https://api.exemplo.com/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, password })
+            });
+
+            const data = await response.json();
+
+            if (response.ok) {
+                // Armazenar estado de login no localStorage
+                localStorage.setItem('isLoggedIn', true);
+                // Redirecionar para a página de inscrição
+                window.location.href = 'inscricao.html';
+            } else {
+                alert('Login falhou: ' + data.message);
+            }
+        }
+    </script>
 	<div class="section">
 		<div class="container">
 			<div class="row full-height justify-content-center">
@@ -34,34 +62,38 @@
 											<a href="https://www.web-leb.com/code" class="btn mt-4">Entrar</a>
                       <p class="mb-0 mt-4 text-center"><a href="https://www.web-leb.com/code" class="link">Esqueceu sua senha?</a></p>
 				      					</div>
-                    </div>
-                </div>
-            </div>
-            <div class="card-back">
-                <div class="center-wrap">
-                    <div class="section text-center">
-                        <h4 class="mb-3 pb-3">Cadastrar</h4>
-                        <div class="form-group">
-                            <input type="text" class="form-style" placeholder="Nome Completo">
-                            <i class="input-icon uil uil-user"></i>
-                        </div>  
-                        <div class="form-group mt-2">
-                            <input type="tel" class="form-style" placeholder="Telefone">
-                            <i class="input-icon uil uil-phone"></i>
-                        </div>  
-                        <div class="form-group mt-2">
-                            <input type="email" class="form-style" placeholder="Email">
-                            <i class="input-icon uil uil-at"></i>
-                        </div>
-                        <div class="form-group mt-2">
-                            <input type="password" class="form-style" placeholder="Senha">
-                            <i class="input-icon uil uil-lock-alt"></i>
-                        </div>
-                        <a href="#" class="btn mt-4">Cadastrar</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+			      					</div>
+			      				</div>
+								<div class="card-back">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-3 pb-3">Cadastrar</h4>
+											<div class="form-group">
+												<input type="text" class="form-style" placeholder="Nome Completo">
+												<i class="input-icon uil uil-user"></i>
+											</div>	
+											<div class="form-group mt-2">
+												<input type="tel" class="form-style" placeholder="Telefone">
+												<i class="input-icon uil uil-phone"></i>
+											</div>	
+                      <div class="form-group mt-2">
+												<input type="email" class="form-style" placeholder="Email">
+												<i class="input-icon uil uil-at"></i>
+											</div>
+											<div class="form-group mt-2">
+												<input type="password" class="form-style" placeholder="Senha">
+												<i class="input-icon uil uil-lock-alt"></i>
+											</div>
+											<a href="https://www.web-leb.com/code" class="btn mt-4">Cadastrar</a>
+				      					</div>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>
 </body>
 </html>
