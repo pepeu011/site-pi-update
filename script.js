@@ -48,3 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const authToken = localStorage.getItem('authToken');
+    const loginLink = document.getElementById('loginLink');
+    const logoutLink = document.getElementById('logoutLink');
+
+    if (authToken) {
+        // Usuário está logado
+        loginLink.style.display = 'none';
+        logoutLink.style.display = 'inline';
+    } else {
+        // Usuário não está logado
+        loginLink.style.display = 'inline';
+        logoutLink.style.display = 'none';
+    }
+});
+
+function logout() {
+    localStorage.removeItem('authToken');
+    window.location.href = './Cadastro/login.html';
+}
