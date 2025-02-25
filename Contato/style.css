@@ -1,121 +1,203 @@
- * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
 
-        body {
-            background-color: #0a0a0a;
-            color: #ffffff;
-        }
+body {
+    background-color: black;
+    color: #ffffff;
+    line-height: 1.6;
+}
 
-        header {
-            background-color: #1a1a1a;
-            padding: 20px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
+/* Estilos do Header */
+header {
+    background-color: transparent;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
 
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        .logo {
-            font-size: 24px;
-            color: #00ff88;
-            font-weight: bold;
-        }
+.logo img {
+    width: 130px;
+    object-fit: cover;
+}
 
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 30px;
-            transition: color 0.3s;
-        }
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
 
-        .nav-links a:hover {
-            color: #00ff88;
-        }
+.nav-links a:hover {
+    color: #00ff88;
+}
 
-        .contact {
-            padding: 150px 20px 100px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
+.entrar-botao a {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
-        .contact h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #00ff88;
-        }
+.entrar-botao a:hover {
+    background-color: #00cc66;
+    transform: scale(1.05);
+}
 
-        .contact p {
-            font-size: 20px;
-            margin-bottom: 30px;
-        }
+/* Estilos da Seção de Contato */
+.contact {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 150px auto 50px;
+    animation: fadeIn 1s ease-in-out;
+}
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-        .contact-form input,
-        .contact-form textarea {
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px solid #333;
-            background-color: #1a1a1a;
-            color: #ffffff;
-            font-size: 16px;
-        }
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #00ff88;
+}
 
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-            color: #888;
-        }
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
 
-        .contact-form textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+.contact-info, .contact-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 136, 0.2);
+}
 
-        .contact-form button {
-            background-color: #00ff88;
-            color: #1a1a1a;
-            padding: 15px 40px;
-            border-radius: 25px;
-            border: none;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s;
-        }
+.contact-info h3, .contact-form h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #00ff88;
+}
 
-        .contact-form button:hover {
-            transform: scale(1.05);
-        }
+.contact-info p {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
 
-        footer {
-            background-color: #000000;
-            padding: 50px 20px;
-            text-align: center;
-        }
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
 
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
+.contact-info ul li {
+    margin-bottom: 1rem;
+    color: #ffffff;
+}
 
-            .contact h1 {
-                font-size: 36px;
-            }
-        }
+.contact-info ul li i {
+    margin-right: 10px;
+    color: #00ff88;
+}
+
+.social-media-links {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os ícones */
+}
+.social-media-links a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: #000; /* Cor dos ícones */
+    font-size: 34px; /* Tamanho dos ícones */
+}
+.social-media-links a:hover {
+    color: #007bff; /* Cor ao passar o mouse */
+}
+
+.contact-form .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: #00ff88;
+    box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+.cta-button {
+    background-color: #00ff88;
+    color: #1a1a1a;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cta-button:hover {
+    background-color: #00cc66;
+    transform: scale(1.05);
+}
+
+/* Estilos do Footer */
+footer {
+    background-color: transparent;
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info, .contact-form {
+        padding: 20px;
+    }
+}

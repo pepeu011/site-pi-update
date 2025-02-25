@@ -326,7 +326,7 @@ footer {
 }
 
 button[type="submit"] {
-    width: 100%;
+    width: 30%;
     padding: 15px;
     background-color: #00ff88;
     color: #1a1a1a;

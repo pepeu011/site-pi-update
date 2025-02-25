@@ -233,7 +233,7 @@ body {
 }
 
 .partner-logo img {
-    max-width: 150px;
+    max-width: 70px;
     border-radius: 10px;
     transition: transform 0.2s;
 }
