@@ -23,7 +23,7 @@
 
     <section class="registration-form">
         <h2>Inscreva-se no Curso</h2>
-        <form action="./processar-inscricao.php" method="post">
+        <form id="registrationForm" action="./processar-inscricao.php" method="post">
             <!-- Dados Pessoais -->
             <div class="form-section">
                 <h3>Dados Pessoais</h3>
@@ -64,5 +64,18 @@
     <footer>
         <p>© 2025 GameMaster Academy. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Aqui você pode adicionar qualquer lógica adicional antes de exibir o alerta
+
+            alert('Inscrição realizada com sucesso!'); // Exibe o alerta
+
+            // Envia o formulário após o alerta
+            this.submit();
+        });
+    </script>
 </body>
 </html>

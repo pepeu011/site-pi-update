@@ -178,3 +178,28 @@ display: none;
   color: #00ff88;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
+
+.logo img {
+  width: 130px;
+  object-fit: cover;
+  
+}
+
+@media (max-width: 576px) {
+
+  .section {
+    padding: 10px;
+  }
+
+  .card-3d-wrap {
+    width: 90%;
+  }
+
+  .form-style {
+    padding: 8px;
+  }
+
+  .btn {
+    padding: 8px;
+  }
+}
